@@ -32,7 +32,7 @@ export default {
             return new Response("Invalid Solana RPC request", { status: 400 })
         }
 
-        const rpcUrl = "https://api.devnet.solana.com"
+        const rpcUrl = "https://devnet.helius-rpc.com/?api-key=87903272-8292-4dbd-b3c0-c9ddec0f3ef6"
 
         const rpcResponse = await fetch(rpcUrl, {
             method: "POST",

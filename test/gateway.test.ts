@@ -13,7 +13,7 @@ describe("RPC Gateway", () => {
                 jsonrpc: "2.0",
                 id: 1,
                 method: "getAccountInfo",
-                params: ["7864osdiV5r87pQnK8vzWEhstZ8S7JUo7bMMf1VhTHcS"]
+                params: ["DWNSuxCniY8m11DazRoN3VqvDZK8Sps2wgoQHWx3t4Sx"]
             })
         })
 
