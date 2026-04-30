@@ -10,6 +10,7 @@ const ALLOWED_METHODS = [
     "getAccountInfo"
 ]
 
+// used to check the rpc request format
 export function rpcFormat(body: unknown): body is RpcRequest {
     // Must be an object
     if (typeof body !== "object" || body === null) {

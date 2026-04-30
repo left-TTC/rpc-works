@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest"
 
-const WORKER_URL = "http://localhost:8787"
+const WORKER_URL = "http://127.0.0.1:8787"
 
 describe("RPC Gateway", () => {
 

@@ -13,6 +13,8 @@
 
 import { rpcFormat } from "./rpcFormat";
 
+const VPS_SITE = "http://74.48.78.146:3000"
+
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
 
@@ -32,7 +34,8 @@ export default {
             return new Response("Invalid Solana RPC request", { status: 400 })
         }
 
-        const rpcUrl = "https://devnet.helius-rpc.com/?api-key=87903272-8292-4dbd-b3c0-c9ddec0f3ef6"
+        // use the vpn site
+        const rpcUrl =  VPS_SITE + "/proxy"
 
         const rpcResponse = await fetch(rpcUrl, {
             method: "POST",
@@ -43,7 +46,6 @@ export default {
         })
         
 console.log("RPC status:", rpcResponse.status)
-
 		return rpcResponse
 	},
 } satisfies ExportedHandler<Env>;
