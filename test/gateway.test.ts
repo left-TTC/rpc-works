@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest"
 
-const WORKER_URL = "http://127.0.0.1:8787"
+const WORKER_URL = "https://rpc.hollowheart.top/"
 
 describe("RPC Gateway", () => {
 
@@ -16,6 +16,9 @@ describe("RPC Gateway", () => {
                 params: ["DWNSuxCniY8m11DazRoN3VqvDZK8Sps2wgoQHWx3t4Sx"]
             })
         })
+
+        console.log(res.status)
+        console.log(await res.text())
 
         expect(res.status).toBe(200)
 

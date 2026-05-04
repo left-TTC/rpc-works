@@ -14,6 +14,20 @@
 		"nodejs_compat"
 	],
     "route": "https://rpc.hollowheart.top/*",
+    "durable_objects": {
+        "bindings": [
+            {
+                "name": "RATE_LIMITER",
+                "class_name": "RateLimiter"
+            }
+        ]
+    },
+    "migrations": [
+        {
+            "tag": "v1",
+            "new_sqlite_classes": ["RateLimiter"]
+        }
+    ]
     
 
 	/**

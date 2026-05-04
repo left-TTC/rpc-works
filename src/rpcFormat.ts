@@ -7,12 +7,13 @@ type RpcRequest = {
 
 const ALLOWED_METHODS = [
     "getProgramAccounts",
-    "getAccountInfo"
+    "getAccountInfo",
+    "getMultipleAccounts"
 ]
 
 // used to check the rpc request format
 export function rpcFormat(body: unknown): body is RpcRequest {
-    // Must be an object
+
     if (typeof body !== "object" || body === null) {
         return false
     }
@@ -35,10 +36,7 @@ export function rpcFormat(body: unknown): body is RpcRequest {
     }
 
     // params must be array if exists
-    if (
-        rpc.params !== undefined &&
-        !Array.isArray(rpc.params)
-    ) {
+    if (rpc.params !== undefined && !Array.isArray(rpc.params)) {
         return false
     }
 
